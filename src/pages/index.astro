@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "Home Page";
@@ -10,14 +12,26 @@ const pageTitle = "Home Page";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-	
+        <title>{pageTitle}</title>	
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>  
+		<!-- <Header />		 -->
+		<div class="hamburger">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
 
+
+		<div class="nav-links">
+			<a href="/" >Home</a>
+			<a href="/about/">About</a>
+			<a href="/blog/">Blog</a>
+		</div>		 
         <h1>{pageTitle}</h1>
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
